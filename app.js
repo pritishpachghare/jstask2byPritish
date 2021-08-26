@@ -28,13 +28,15 @@ const recipesArray = [
 
 let recepe = prompt("Recepe name");
 
-for (let recp of recipesArray) {
-    if (recp.meal.toLowerCase() === recepe.toLocaleLowerCase()) {
-        console.log(' Recepe: ' + recp.meal + " takes " + recp.time + " and ingredients required are :"
-            + recp.ingredients);
+for (let i = 0; i <= recipesArray.length; i++) {
+    let recp = recipesArray[i];
+    if (recp.meal.toLowerCase() === recepe.toLowerCase()) {
+        console.log(` Recepe: ${recp.meal} takes ${recp.time}  and ingredients required are : ${recp.ingredients}`);
         break;
     }
+
     if (recp.meal === recipesArray[recipesArray.length - 1].meal) {
-        console.log(' Recepe: ' + "Sorry recepe is not in the list.")
+        console.log('Recepe: Sorry recepe is not in the list');
     }
 }
+
